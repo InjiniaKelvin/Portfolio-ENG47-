@@ -2,7 +2,6 @@ import {
   BadgeCheck,
   Code2,
   Database,
-  Github,
   Globe,
   Mail,
   MapPin,
@@ -13,6 +12,8 @@ import {
   Sparkles,
   Wrench,
 } from "lucide-react";
+
+import { GithubIcon } from "@/components/ui/GithubIcon";
 
 import type {
   AboutHighlight,
@@ -247,7 +248,7 @@ export const contactItems: ContactItem[] = [
     value: "InjiniaKelvin",
     href: siteConfig.github,
     description: "Explore open-source work and code samples.",
-    icon: Github,
+    icon: GithubIcon,
   },
 ];
 
@@ -255,7 +256,7 @@ export const socialLinks: SocialLink[] = [
   {
     label: "GitHub",
     href: siteConfig.github,
-    icon: Github,
+    icon: GithubIcon,
   },
   {
     label: "Email",

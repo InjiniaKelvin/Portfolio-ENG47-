@@ -2,12 +2,13 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { ArrowUpRight, ChevronDown, Github, Mail } from "lucide-react";
+import { ArrowUpRight, ChevronDown, Mail } from "lucide-react";
 
 import { heroBadges, siteConfig } from "@/data/portfolio";
 import { fadeUp, staggerContainer, viewport } from "@/lib/motion";
 import { Button } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
+import { GithubIcon } from "@/components/ui/GithubIcon";
 
 export function Hero() {
   return (
@@ -60,7 +61,7 @@ export function Hero() {
                 Contact Me <Mail size={16} />
               </Button>
               <Button href={siteConfig.github} variant="ghost" target="_blank">
-                GitHub <Github size={16} />
+                GitHub <GithubIcon size={16} />
               </Button>
             </motion.div>
           </div>

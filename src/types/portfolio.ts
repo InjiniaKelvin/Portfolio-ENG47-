@@ -1,4 +1,7 @@
 import type { LucideIcon } from "lucide-react";
+import type { ComponentType, SVGProps } from "react";
+
+type IconComponent = LucideIcon | ComponentType<SVGProps<SVGSVGElement> & { size?: number }>;
 
 export type NavItem = {
   label: string;
@@ -12,7 +15,7 @@ export type AboutHighlight = {
 
 export type SkillCategory = {
   title: string;
-  icon: LucideIcon;
+  icon: IconComponent;
   skills: string[];
 };
 
@@ -43,11 +46,11 @@ export type ContactItem = {
   value: string;
   href: string;
   description: string;
-  icon: LucideIcon;
+  icon: IconComponent;
 };
 
 export type SocialLink = {
   label: string;
   href: string;
-  icon: LucideIcon;
+  icon: IconComponent;
 };
