@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Analytics } from '@vercel/analytics/next';
 import "./globals.css";
 
 const inter = localFont({
@@ -86,6 +87,7 @@ export default function RootLayout({
     >
       <body className="min-h-screen bg-slate-950 text-slate-100 antialiased">
         {children}
+        <Analytics />
       </body>
     </html>
   );
