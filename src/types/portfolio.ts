@@ -36,7 +36,8 @@ export type ProjectItem = {
   solution: string;
   features: string[];
   tech: string[];
-  impact: string;
+  impact?: string;
+  status?: string;
   featured?: boolean;
   link?: string;
 };
