@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight, ChevronDown, Mail } from "lucide-react";
@@ -11,6 +12,8 @@ import { Container } from "@/components/ui/Container";
 import { GithubIcon } from "@/components/ui/GithubIcon";
 
 export function Hero() {
+  const [profileImage, setProfileImage] = useState("/profile.jpg");
+
   return (
     <section id="home" className="relative overflow-hidden pt-36">
       <div className="absolute inset-0 -z-10">
@@ -74,11 +77,12 @@ export function Hero() {
             <div className="glass-panel relative rounded-[32px] p-6">
               <div className="relative overflow-hidden rounded-3xl">
                 <Image
-                  src="/profile.jpg"
+                  src={profileImage}
                   alt="Kelvin Mwania profile"
                   width={380}
                   height={420}
                   className="h-[420px] w-full object-cover animate-float"
+                  onError={() => setProfileImage("/profile-placeholder.svg")}
                   priority
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
