@@ -74,7 +74,7 @@ export function Hero() {
             <div className="glass-panel relative rounded-[32px] p-6">
               <div className="relative overflow-hidden rounded-3xl">
                 <Image
-                  src="/profile-placeholder.svg"
+                  src="/profile.jpg"
                   alt="Kelvin Mwania profile"
                   width={380}
                   height={420}

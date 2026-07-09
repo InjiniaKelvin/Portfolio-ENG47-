@@ -1,6 +1,5 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 
@@ -31,35 +30,14 @@ export function Projects() {
             className="grid gap-6 lg:grid-cols-2"
           >
             {projects.map((project) => (
-              <motion.div
-                key={project.name}
-                variants={fadeUp}
-                className={cn(project.featured && "lg:col-span-2")}
-              >
+              <motion.div key={project.name} variants={fadeUp}>
                 <GlassCard
                   className={cn(
                     "overflow-hidden p-0",
                     project.featured && "border-cyan-300/40",
                   )}
                 >
-                  <div
-                    className={cn(
-                      "grid gap-6",
-                      project.featured
-                        ? "lg:grid-cols-[1fr_1.2fr]"
-                        : "sm:grid-cols-[1fr_1.4fr]",
-                    )}
-                  >
-                    <div className="relative min-h-[220px]">
-                      <Image
-                        src="/project-placeholder.svg"
-                        alt={`${project.name} preview`}
-                        fill
-                        className="object-cover"
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-slate-950/30 to-transparent" />
-                    </div>
-                    <div className="space-y-4 p-6">
+                  <div className="space-y-4 p-6">
                       <div className="flex flex-wrap items-center justify-between gap-3">
                         <div>
                           <p className="text-xs uppercase tracking-[0.35em] text-cyan-300/80">
@@ -132,7 +110,6 @@ export function Projects() {
                           {project.impact}
                         </p>
                       )}
-                    </div>
                   </div>
                 </GlassCard>
               </motion.div>
