@@ -79,10 +79,15 @@ export function Projects() {
                             target="_blank"
                             rel="noreferrer"
                           >
-                            Live Demo <ArrowUpRight size={16} />
+                            Repository <ArrowUpRight size={16} />
                           </a>
                         )}
                       </div>
+                      {project.status && (
+                        <p className="inline-flex w-fit rounded-full border border-cyan-300/40 bg-cyan-400/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-cyan-200">
+                          {project.status}
+                        </p>
+                      )}
 
                       <div className="space-y-3 text-sm text-slate-300">
                         <p>
@@ -121,10 +126,12 @@ export function Projects() {
                         </div>
                       </div>
 
-                      <p className="text-sm text-cyan-100/90">
-                        <span className="font-semibold text-white">Impact:</span>{" "}
-                        {project.impact}
-                      </p>
+                      {project.impact && (
+                        <p className="text-sm text-cyan-100/90">
+                          <span className="font-semibold text-white">Impact:</span>{" "}
+                          {project.impact}
+                        </p>
+                      )}
                     </div>
                   </div>
                 </GlassCard>

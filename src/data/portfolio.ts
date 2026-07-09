@@ -29,7 +29,7 @@ export const siteConfig = {
   name: "Kelvin Mwania",
   role: "Software Engineer",
   location: "Nairobi, Kenya",
-  email: "engineerjuliusjr47@gmail.com",
+  email: "kelvinmwania47@gmail.com",
   phones: ["0794536984", "0117224394"],
   github: "https://github.com/InjiniaKelvin",
   headline: "Software Engineer & System Builder",
@@ -77,29 +77,48 @@ export const aboutHighlights: AboutHighlight[] = [
 
 export const skills: SkillCategory[] = [
   {
-    title: "Frontend",
+    title: "Languages",
     icon: Monitor,
-    skills: ["Next.js", "Vue.js", "Tailwind CSS", "JavaScript"],
+    skills: ["JavaScript", "TypeScript", "Python", "Kotlin", "C++"],
+  },
+  {
+    title: "Frontend/Mobile",
+    icon: Server,
+    skills: [
+      "React",
+      "React Native",
+      "Expo",
+      "Next.js",
+      "Vue.js",
+      "React Query",
+      "Tailwind CSS",
+      "Bootstrap",
+    ],
   },
   {
     title: "Backend",
-    icon: Server,
-    skills: ["Node.js", "Firebase", "REST APIs"],
+    icon: Database,
+    skills: ["Node.js", "Express.js", "Firebase", "REST APIs", "JWT auth", "Socket.IO"],
   },
   {
     title: "Databases",
-    icon: Database,
-    skills: ["MongoDB", "Supabase", "Firestore"],
+    icon: Code2,
+    skills: ["PostgreSQL/Supabase", "MongoDB", "Firestore"],
   },
   {
-    title: "Programming",
-    icon: Code2,
-    skills: ["Python", "Kotlin", "JavaScript"],
+    title: "ML/Data",
+    icon: Globe,
+    skills: ["Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
+  },
+  {
+    title: "Payments",
+    icon: ShieldCheck,
+    skills: ["IntaSend", "M-Pesa STK Push"],
   },
   {
     title: "Tools",
     icon: Wrench,
-    skills: ["Git & GitHub", "Linux", "Agile workflows"],
+    skills: ["Qt6", "CMake", "Git/GitHub", "Linux", "Agile/Scrum"],
   },
 ];
 
@@ -138,86 +157,75 @@ export const experiences: ExperienceItem[] = [
 
 export const projects: ProjectItem[] = [
   {
-    name: "QuickFix",
-    tagline: "Flagship on-demand service dispatch platform.",
+    name: "QuickFix — Full-Stack Home Service Platform",
+    tagline: "Cross-platform app connecting customers with vetted technicians.",
     problem:
-      "Service businesses lose revenue when job requests are managed manually across fragmented channels.",
+      "Customers and service providers need a reliable, real-time way to coordinate home repairs across mobile and web.",
     solution:
-      "A real-time dispatch system that centralizes requests, automates scheduling, and tracks field execution with full visibility.",
+      "Built a React Native/Expo mobile app and Next.js web app with real-time job-to-technician matching, live status tracking, and escrow-style payments.",
     features: [
-      "Smart job routing with priority-based queues",
-      "Live technician status tracking and SLA monitoring",
-      "Customer portals for updates, approvals, and feedback",
-      "Operational analytics dashboards for performance tuning",
+      "Real-time job-to-technician matching with Socket.IO",
+      "Live repair-status tracking for customers and technicians",
+      "Escrow-style wallet that holds funds until job completion",
+      "Integrated M-Pesa STK Push and IntaSend payment flows",
     ],
-    tech: ["Next.js", "Node.js", "Supabase", "Tailwind CSS", "Framer Motion"],
+    tech: ["React Native", "Expo", "Next.js", "Socket.IO", "M-Pesa STK Push", "IntaSend"],
     impact:
-      "Improved dispatch turnaround and provided an enterprise-ready experience for service teams.",
+      "Enabled practical home-service dispatch and payment handling tailored for Kenyan payment rails.",
     featured: true,
+    link: "https://github.com/InjiniaKelvin/Projo",
   },
   {
-    name: "MindGuard AI",
-    tagline: "Intelligent mental wellness companion.",
+    name: "MindGuard AI — Student Mental Health Risk Classifier",
+    tagline: "ML pipeline for identifying at-risk students.",
     problem:
-      "Users need discreet, always-available support for stress management and emotional wellness.",
+      "Institutions need early, data-driven identification of students at mental-health risk.",
     solution:
-      "An AI-assisted platform that offers daily check-ins, supportive insights, and guided wellness routines.",
+      "Trained and compared four classifiers using attendance, sleep, and stress-related indicators to flag risk levels.",
     features: [
-      "Sentiment-aware journaling insights",
-      "Personalized wellness routines",
-      "Confidential data handling and encrypted storage",
+      "Compared Logistic Regression, SVM, Random Forest, and Gradient Boosting",
+      "Logistic Regression achieved 85.8% test accuracy",
+      "End-to-end reproducible and documented ML pipeline",
     ],
-    tech: ["Next.js", "Python", "AI APIs", "Supabase"],
+    tech: ["Python", "Scikit-learn", "Pandas", "NumPy", "Matplotlib"],
     impact:
-      "Enabled proactive mental wellness support and improved daily user engagement.",
+      "Provided a reproducible baseline model for proactive mental-health risk screening.",
+    link: "https://github.com/InjiniaKelvin/MINDGUARDAI",
   },
   {
-    name: "C-Wallet",
-    tagline: "Modern fintech wallet for everyday payments.",
+    name: "KevTecH Net — Linux Hotspot Manager",
+    tagline: "Desktop tool for managed Linux WiFi hotspot operations.",
     problem:
-      "Users need faster, secure digital payment workflows without complex onboarding.",
+      "Linux users need a reliable way to manage hotspot sharing with automatic recovery and onboarding support.",
     solution:
-      "A lightweight wallet that offers instant transfers, smart budgeting, and transaction insights.",
+      "Built a C++/Qt6 desktop manager for hotspot provisioning, internet sharing, and resilient reconnection workflows.",
     features: [
-      "Instant peer-to-peer transfers",
-      "Real-time balance and spend analytics",
-      "Secure authentication and audit logs",
+      "NAT forwarding and internet sharing controls",
+      "Ethernet/mobile-data fallback support",
+      "QR-code onboarding for connecting devices",
+      "Automatic recovery after connection drops",
     ],
-    tech: ["Kotlin", "Firebase", "Node.js"],
+    tech: ["C++", "Qt6", "CMake", "Linux"],
     impact:
-      "Streamlined digital payments and improved user trust with transparent reporting.",
+      "Improved reliability and usability for Linux hotspot management.",
+    link: "https://github.com/InjiniaKelvin/KevTecH-Net-Hotspot-Manager",
   },
   {
-    name: "WekaCert",
-    tagline: "Digital certification issuance and verification.",
+    name: "WekaCert — Certificate & Document Verification Platform",
+    tagline: "Planned platform for secure certificate and document verification.",
     problem:
-      "Institutions struggle with manual certificate issuance and verification delays.",
+      "Organizations and individuals need secure, trackable verification for certificates and personal documents.",
     solution:
-      "An automated certification platform with secure verification and branded delivery.",
+      "Designing a platform for verification workflows, secure document storage, expiry tracking, and auditability.",
     features: [
-      "Automated issuance workflows",
-      "Verification portal with QR access",
-      "Custom branding for institutions",
+      "Certificate and document verification workflows",
+      "Secure personal document storage",
+      "Document expiry tracking",
+      "Audit trail for document access",
     ],
     tech: ["Vue.js", "Node.js", "MongoDB"],
-    impact:
-      "Reduced verification time and enhanced trust in credential authenticity.",
-  },
-  {
-    name: "Livestock Management System",
-    tagline: "Farm operations and livestock tracking suite.",
-    problem:
-      "Farmers need visibility into livestock health, inventory, and performance metrics.",
-    solution:
-      "A management suite for tracking livestock records, feed cycles, and health alerts.",
-    features: [
-      "Livestock record management",
-      "Health and vaccination reminders",
-      "Production and growth analytics",
-    ],
-    tech: ["Next.js", "Firestore", "Tailwind CSS"],
-    impact:
-      "Improved operational oversight and reduced loss through timely alerts.",
+    status: "In Development",
+    link: "https://github.com/InjiniaKelvin/WekaCert",
   },
 ];
 
